@@ -53,7 +53,12 @@
           gap: 20px;
         }
 
-        button{
+        .button-container {
+          display: flex;
+          gap: 10px; 
+        }
+
+        .logout{
           width: 100px;
           background-color: teal;
           border: none;
@@ -63,6 +68,13 @@
           border-radius: 5px;
         }
 
+        .update{
+          padding: 12px 24px;
+          background-color: #fece51;
+          cursor: pointer;
+          border: none;
+        }
+
         img{
           width: 40px;
           height: 40px;
@@ -70,21 +82,6 @@
           object-fit: cover;
         }
       }
-    }
-  }
-  .chatContainer {
-    flex: 2;
-    background-color: #fcf5f3;
-    height: 100%;
-
-    @include md{
-      flex:none;
-      height: max-content;
-    }
-
-    .wrapper{
-      padding: 0px 20px;
-      height: 100%;
     }
   }
 }

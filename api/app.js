@@ -2,6 +2,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import cors from "cors";
+import morgan from "morgan";
 
 import postRoute from "./routes/post.route.js";
 import authRoute from "./routes/auth.route.js";
@@ -12,6 +13,7 @@ const app = express();
 dotenv.config();
 
 app.use(express.json());
+app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(cors({origin: process.env.CLIENT_URL,credentials: true}))
 
