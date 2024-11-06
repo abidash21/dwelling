@@ -15,9 +15,7 @@ dotenv.config();
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cookieParser());
-app.use(cors({
-    origin: process.env.CLIENT_URL,
-    credentials: true}))
+app.use(cors())
 
 app.use("/api/posts",postRoute);
 app.use("/api/auth",authRoute);
