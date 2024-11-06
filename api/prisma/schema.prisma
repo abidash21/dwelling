@@ -13,18 +13,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id         String      @id @default(auto()) @map("_id") @db.ObjectId
-  email      String      @unique
-  username   String      @unique
-  password   String
-  avatar     String?
-  createdAt  DateTime    @default(now())
-  posts      Post[]
-  savedPosts SavedPost[]
-}
-
-
 model Post {
   id         String      @id @default(auto()) @map("_id") @db.ObjectId
   title      String
@@ -80,4 +68,15 @@ model SavedPost {
   createdAt DateTime @default(now())
 
   @@unique([userId, postId])
+}
+
+model User {
+  id         String      @id @default(auto()) @map("_id") @db.ObjectId
+  email      String      @unique
+  username   String      @unique
+  password   String
+  avatar     String?
+  createdAt  DateTime    @default(now())
+  posts      Post[]
+  savedPosts SavedPost[]
 }
