@@ -5,10 +5,11 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon api/app.js",
-    "build": "npm install && npm install --prefix client && npx prisma generate && npm run build --prefix client",
-    "start": "nodemon api/app.js"
-  },
+  "dev": "nodemon api/app.js",
+  "build": "npm install && npm install --prefix client && npx prisma generate --schema=./prisma/schema.prisma && npm run build --prefix client",
+  "start": "node api/app.js",
+  "postinstall": "npx prisma generate --schema=./prisma/schema.prisma"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
