@@ -113,6 +113,6 @@ export const deletePost = async (req, res) => {
     res.status(200).json({message: "Post Deleted"});
   } catch (err) {
     console.log(err);
-    res.status(500).json({ message: "Failed to delte post" });
+    res.status(500).json({ message: "Failed to delete post" });
   }
 };
