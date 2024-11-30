@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
   "dev": "nodemon api/app.js",
-  "build": "npm install && npm install --prefix client && npx prisma generate --schema=./prisma/schema.prisma && npm run build --prefix client",
+  "build": "npm install && npm install --prefix client && npx prisma generate --schema=api/prisma/schema.prisma && npm run build --prefix client",
   "start": "node api/app.js",
-  "postinstall": "npx prisma generate --schema=./prisma/schema.prisma"
+  "postinstall": "npx prisma generate --schema=api/prisma/schema.prisma"
 },
   "keywords": [],
   "author": "",
