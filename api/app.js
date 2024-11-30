@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(cors({
-    origin: process.env.CLIENT_URL,
+    origin: "https://dwelling-4.onrender.com",
     credentials: true}))
 
 app.use("/api/posts",postRoute);

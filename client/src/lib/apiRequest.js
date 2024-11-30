@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiRequest = axios.create({
-  baseURL: "http://localhost:9000/api",
+  baseURL: "https://dwelling-4.onrender.com/api",
   withCredentials: true, //for cookies
 });
 
