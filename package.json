@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon api/app.js",
-    "build": "npm install && npm install --prefix client && npm run build --prefix client",
+    "build": "npm install && npm install --prefix client && npx prisma generate && npm run build --prefix client",
     "start": "nodemon api/app.js"
   },
   "keywords": [],
